@@ -49,7 +49,7 @@ mux_2to1 m2_B(bnegate, b, bjo, net2);
 and n3 (net3, net1, net2);
 or n4 (net4, net1, net2);
 xor n5(net6,net1,net2);
-
+///////////// FullAdder ndryshime 
 full_adder FA (net1, net2, cin, net5, cout);
 
 mux_4to1 m4 (op[0], op[2], net3, net4, net5, less, result);
