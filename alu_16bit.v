@@ -62,6 +62,8 @@ alu_1bit alu12(a[12], b[12], c[11], ainvert, bnegate, less, op, result[12], c[12
 alu_1bit alu13(a[13], b[13], c[12], ainvert, bnegate, less, op, result[13], c[13]);
 alu_1bit alu14(a[14], b[14], c[13], ainvert, bnegate, less, op, result[14], c[14]);
 alu_1bit alu15(a[15], b[15], c[14], ainvert, bnegate, less, op, result[15], c[15]);
-
+    
+    assign left={a[14:0],1'b0};
+    assign right={1'b0,a[15:1]};
 
 endmodule
