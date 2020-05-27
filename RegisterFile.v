@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Arkitektura e Kompjutereve (Ushtrime) - Register File & Memory - Java XI - 08.05.2020
 // shiko minuta 22:00  kto regjistrat i ka ba me reg jo me wire .. line 30
+// min 33 reg hyrjet wire daljet
 
 module RegisterFile(input RS, input RT, input RD, input WD, input we, 
 input clk, output RD1, output RD2);
