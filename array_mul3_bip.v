@@ -2,8 +2,8 @@
 
 module array_mul3_bip (a, b, prod);
 //define inputs and output
-input [2:0] a, b;
-output [5:0] prod; 
+  input [15:0] a, b;//inputi 16 bit
+  output [31:0] prod; //outputi 32 bit
 
 wire net1, net2, net3, net4, net5, net6, net7, net8, net9,
 net10, net11, net12, net13, net14, net15;
