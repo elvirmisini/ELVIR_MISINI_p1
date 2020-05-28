@@ -24,9 +24,9 @@ module alu_1bit(
     input a,
     input b,
     input cin,
-    input ainvert,
+    input ainvert, // me ba zero
     input bnegate,
-    input less,
+    input less, // me ba zero
     input [2:0] op,
     output result,
     output cout
