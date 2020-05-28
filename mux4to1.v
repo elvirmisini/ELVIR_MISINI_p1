@@ -20,10 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module mux_4to1 (s0, s1, d0, d1, d2, d3, z1);
-//define inputs and output
-input s0, s1, d0, d1, d2, d3;
-output z1;
-//use the nested conditional operator
-assign z1 = s1 ? (s0 ? d3 : d2) : (s0 ? d1 : d0);
+module mux_4to1(output out, input D0, D1, D2, S0, S1, S2);
+assign S1bar=~S1;
+assign S0bar=~S0;
+assign S2bar=~S2;
+assign out = (D0 & S2bar & S1bar & S0bar) | (D1 & S2bar & S1bar & S0) | (D2 & S2bar & S1 & S0bar) ;
 endmodule

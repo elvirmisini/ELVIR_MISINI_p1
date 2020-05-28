@@ -1,0 +1,11 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+,,,,,,alu_16bit,,,,,,,,
+C:/Users/Admin/Desktop/ALU/AK/alu_1Bit.v,1590700239,verilog,,C:/Users/Admin/Desktop/ALU/AK/full_adder.v,,alu_1bit,,,,,,,,
+C:/Users/Admin/Desktop/ALU/AK/alu_1bit_tb.v,1590689528,verilog,,,,alu_1bit_tb,,,,,,,,
+C:/Users/Admin/Desktop/ALU/AK/full_adder.v,1590684226,verilog,,C:/Users/Admin/Desktop/ALU/AK/mux4to1.v,,full_adder,,,,,,,,
+C:/Users/Admin/Desktop/ALU/AK/mux4to1.v,1590684015,verilog,,C:/Users/Admin/Desktop/ALU/AK/mux_2to1.v,,mux_4to1,,,,,,,,
+C:/Users/Admin/Desktop/ALU/AK/mux_2to1.v,1590684015,verilog,,C:/Users/Admin/Desktop/ALU/AK/alu_16bit.v,,mux_2to1,,,,,,,,
+C:/Users/Admin/project_2/project_2.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,

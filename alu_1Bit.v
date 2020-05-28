@@ -24,15 +24,15 @@ module alu_1bit(
     input a,
     input b,
     input cin,
-    input ainvert, // me ba zero
+    input ainvert,
     input bnegate,
-    input less, // me ba zero
+    //input less,
     input [2:0] op,
     output result,
     output cout
     );
     
-wire a, b, cin, ainvert, bnegate, less;
+wire a, b, cin, ainvert, bnegate; //less;
 wire[2:0] op;
 
 wire result;
@@ -48,12 +48,10 @@ mux_2to1 m2_B(bnegate, b, bjo, net2);
 
 and n3 (net3, net1, net2);
 or n4 (net4, net1, net2);
-xor n5(net6,net1,net2);
-///////////// FullAdder ndryshime 
+
 full_adder FA (net1, net2, cin, net5, cout);
 
-mux_4to1 m4 (op[0], op[2], net3, net4, net5, less, result);
-// Ka nevoj per pak ndryshime
+mux_4to1 m4 (result, net3, net4, net5, op[0], op[1], op[2] );
 
 endmodule
 
