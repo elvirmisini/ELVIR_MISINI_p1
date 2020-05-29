@@ -1,8 +1,9 @@
+`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
 // 
-// Create Date: 05/12/2020 11:43:02 PM
+// Create Date: 04/24/2020 01:52:15 PM
 // Design Name: 
 // Module Name: alu_1bit
 // Project Name: 
@@ -25,13 +26,17 @@ module alu_1bit(
     input cin,
     input ainvert,
     input bnegate,
-    //input less,
+    input less,
     input [2:0] op,
     output result,
     output cout
     );
     
+wire a, b, cin, ainvert, bnegate, less;
+wire[2:0] op;
 
+wire result;
+wire cout;
 
 wire net1, net2, net3, net4, net5, ajo, bjo;
 
@@ -46,7 +51,6 @@ or n4 (net4, net1, net2);
 
 full_adder FA (net1, net2, cin, net5, cout);
 
-mux_4to1 m4 (result, net3, net4, net5, op[0], op[1], op[2] );
+mux_4to1 m4 (op[0], op[1], op[2], net3, net4, net5, result);
 
 endmodule
-

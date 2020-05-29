@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -18,10 +19,22 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+module mux_4to1(S0, S1, S2, D0, D1, D2,D3,D4,D5,D6,D7, out);
+input wire D0, D1, D2,D3,D4,D5,D6,D7 S0, S1, S2;
+output reg out;
+always@(*)
+begin
+case(S0 & S1 & S2)
+3'b000: out=D0;
+3'b010: out=D1;
+3'b011: out=D2;
+3'b100: out=D3;
+3'b101: out=D4;
+3'b001: out=D5;
+3'b110: out=D6;
+3'b111: out=D7;
 
-module mux_4to1(output out, input D0, D1, D2, S0, S1, S2);
-assign S1bar=~S1;
-assign S0bar=~S0;
-assign S2bar=~S2;
-assign out = (D0 & S2bar & S1bar & S0bar) | (D1 & S2bar & S1bar & S0) | (D2 & S2bar & S1 & S0bar) ;
+default: out=1'b0;
+endcase
+end
 endmodule

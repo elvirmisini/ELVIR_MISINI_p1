@@ -34,7 +34,7 @@ wire zero, overflow;
 
 initial 
 $monitor ("a = %d, b = %d, cin = %b, cout = %b,op2 =%b, op1 = %b, op0 = %b, ainvert = %b, bnegate = %b, zero=%b, result=%d, overflow=%b",
-a, b, cin, cout, op[1], op[0], ainvert, bnegate, zero, result, overflow);
+a, b, cin, cout, op[2], op[1], op[0], ainvert, bnegate, zero, result, overflow);
 
 
 initial
@@ -48,7 +48,7 @@ begin
 #10 a=0; b=0; cin=0; ainvert=0; bnegate=0;  op[2]=1; op[1]=0; op[0]=1;//r=0 cout=0
 #10 a=1; b=0; cin=0; ainvert=0; bnegate=0;  op[2]=1; op[1]=0; op[0]=1;//r=1 cout=0
 #10 a=1; b=1; cin=0; ainvert=0; bnegate=0;  op[2]=1; op[1]=0; op[0]=1;//r=1 cout=0
-
+/*
 //ADD
 #10 a=8'h0000000f; b=8'h0000000e;cin=0; ainvert=0; bnegate=0;  op[1]=1; op[0]=0;//r=0 cout=0
 #10 a=8'h00000000; b=8'h00000000;cin=0; ainvert=0; bnegate=0;  op[1]=1; op[0]=0;//r=0 cout=0
@@ -59,6 +59,7 @@ begin
 //not (a OR b) 
 #10 a=16'd2; b=16'd1; cin=0; ainvert=1; bnegate=1;  op[1]=0; op[0]=0;//r=0 cout=0
 #10 $stop;
+*/
 end
 
 alu_16bit A16 (a, b, cin, ainvert, bnegate, op, result, cout, zero);
