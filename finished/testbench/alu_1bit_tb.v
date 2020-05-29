@@ -36,9 +36,9 @@ a, b, cin, cout,op[2], op[1], op[0], ainvert, bnegate, less);
 initial
 begin
 //AND
-#0 a=0; b=0; cin=0; ainvert=0; bnegate=0; less=0; op[2]=0;  op[1]=0; op[0]=0; //r=0 cout=0
-#10 a=1; b=0; cin=0; ainvert=0; bnegate=0; less=0; op[2]=0; op[1]=0; op[0]=0;//r=0 cout=0
-#10 a=1; b=1; cin=0; ainvert=0; bnegate=0; less=0; op[2]=0; op[1]=0; op[0]=0;//r=1 cout=0
+#0 a=0; b=0; cin=0; ainvert=0; bnegate=0; less=0; op[2]=0;  op[1]=0; op[0]=0; 
+#10 a=1; b=0; cin=0; ainvert=0; bnegate=0; less=0; op[2]=0; op[1]=0; op[0]=0;
+#10 a=1; b=1; cin=0; ainvert=0; bnegate=0; less=0; op[2]=0; op[1]=0; op[0]=0;
 //OR
 #10 a=0; b=0; cin=0; ainvert=0; bnegate=0; less=0; op[2]=0; op[1]=0; op[0]=1;//r=0 cout=0
 #10 a=1; b=0; cin=0; ainvert=0; bnegate=0; less=0; op[2]=0; op[1]=0; op[0]=1;//r=1 cout=0
